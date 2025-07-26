@@ -1,76 +1,56 @@
-# MatX Project
+# MatX - AR Tile Visualization Platform
 
-A modern web application built with best practices.
+<div align="center">
+  <img src="frontend/src/assets/MatX.png" alt="MatX Logo" width="200"/>
+</div>
 
-## Setup Instructions
+MatX is an innovative Augmented Reality (AR) web platform that revolutionizes how you visualize tiles in your space. Using your device's camera, see tiles come to life in real-time on your floors and walls!
+
+## ✨ Key Features
+
+- 🎯 Real-time AR surface detection and tile visualization
+- 🎨 Extensive tile catalog with various patterns and materials
+- 📐 Instant measurements and cost estimation
+- 🔄 Interactive tile rotation and customization
+- 📱 Works directly in your browser - no app installation needed
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v18 or later)
+- Node.js (v18+)
 - npm or yarn
-- Git
 
 ### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/MatX.git
-cd MatX
-```
+# Clone the repository
+git clone https://github.com/Karnav018/MatX.git
 
-2. Install dependencies:
-```bash
+# Navigate to frontend directory
+cd MatX/frontend
+
+# Install dependencies
 npm install
-# or
-yarn install
-```
 
-### Development Setup
-
-1. Create a `.env` file in the root directory:
-```bash
-cp .env.example .env
-```
-
-2. Start the development server:
-```bash
+# Start development server
 npm run dev
-# or
-yarn dev
 ```
 
-The application will be available at `http://localhost:3000`
+Visit `http://localhost:5173` in your browser to start visualizing!
 
-### Build for Production
+## 🛠️ Tech Stack
 
-```bash
-npm run build
-# or
-yarn build
-```
+- **Frontend:** React + Vite
+- **Styling:** Tailwind CSS
+- **AR Technology:** WebXR API
+- **3D Rendering:** Three.js
 
-## Project Structure
+## 🤝 Contributing
 
-```
-MatX/
-├── src/           # Source files
-├── public/        # Static assets
-├── tests/         # Test files
-└── docs/          # Documentation
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Best Practices
-
-- Follow the established coding style
-- Write tests for new features
-- Update documentation when making changes
-- Use conventional commits for version control
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request
-
-## License
+## 📝 License
 
 MIT
+
+---
+Made with ❤️ by Team MatX
