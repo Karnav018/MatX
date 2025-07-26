@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <img src={Logo} alt="AR Tiles Logo" className="h-10" />
-          <span className="text-zinc-100 font-light tracking-wide text-2xl">
+          <span className="text-white font-light tracking-wide text-2xl">
             MatX
           </span>
         </div>
@@ -59,14 +59,6 @@ const Navbar = () => {
               className="text-zinc-300 hover:text-white px-3 py-2 transition-colors duration-200"
             >
               Products
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/try-now"
-              className="bg-stone-800 text-white px-6 py-2 rounded hover:bg-stone-700 transition-colors duration-200"
-            >
-              Try AR Now
             </Link>
           </li>
         </ul>
@@ -159,15 +151,6 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               Products
-            </Link>
-          </li>
-          <li className="w-full pt-4">
-            <Link
-              to="/try-now"
-              className="block text-center bg-stone-800 text-white px-6 py-3 hover:bg-stone-700 transition-colors duration-200"
-              onClick={toggleMenu}
-            >
-              Try AR Now
             </Link>
           </li>
         </ul>
