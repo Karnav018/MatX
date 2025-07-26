@@ -53,12 +53,13 @@ const Navbar = () => {
               Gallery
             </Link>
           </li>
+          
           <li>
             <Link
-              to="/products"
+              to="/contact"
               className="text-zinc-300 hover:text-white px-3 py-2 transition-colors duration-200"
             >
-              Products
+              Contact
             </Link>
           </li>
         </ul>
@@ -146,11 +147,11 @@ const Navbar = () => {
           </li>
           <li className="w-full">
             <Link
-              to="/products"
+              to="/contact"
               className="block text-zinc-300 hover:text-white text-lg px-4 py-3 hover:bg-zinc-800/50 transition-all duration-200"
               onClick={toggleMenu}
             >
-              Products
+              Contact
             </Link>
           </li>
         </ul>
