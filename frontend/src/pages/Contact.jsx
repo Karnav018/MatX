@@ -1,15 +1,15 @@
 const Contact = () => {
   return (
-    <div className="min-h-[80vh] bg-gradient-to-b from-zinc-50 to-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-[80vh] bg-gradient-to-b from-zinc-50 to-white py-16 px-4 sm:px-6 lg:px-8 transition-all duration-300 ease-in-out">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 animate-fadeIn">
           {/* Left side - Contact Information */}
           <div className="flex flex-col justify-center space-y-8">
-            <div>
-              <h1 className="text-4xl font-bold text-zinc-900 tracking-tight">
+            <div className="transform transition-all duration-300 hover:translate-x-1">
+              <h1 className="text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight animate-slideIn">
                 Get in Touch
               </h1>
-              <p className="mt-4 text-lg text-zinc-600 leading-relaxed">
+              <p className="mt-4 text-base md:text-lg text-zinc-600 leading-relaxed animate-fadeIn delay-100">
                 Have questions about MatX? We're here to help you transform your space with our AR tile visualization technology.
               </p>
             </div>
@@ -43,9 +43,9 @@ const Contact = () => {
           </div>
 
           {/* Right side - Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl border border-zinc-100 p-8">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 gap-6">
+          <div className="bg-white rounded-2xl shadow-xl border border-zinc-100 p-6 md:p-8 transform transition-all duration-300 hover:shadow-2xl">
+            <form className="space-y-4 md:space-y-6">
+              <div className="grid grid-cols-1 gap-4 md:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-zinc-700">
                     Name
@@ -56,7 +56,8 @@ const Contact = () => {
                     name="name"
                     className="mt-1 block w-full px-4 py-3 border border-zinc-200 rounded-lg text-zinc-900 placeholder-zinc-400
                             focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent
-                            transition duration-150 ease-in-out"
+                            transition-all duration-200 ease-in-out transform hover:shadow-sm
+                            hover:border-zinc-300"
                     placeholder="Your name"
                   />
                 </div>
@@ -71,7 +72,8 @@ const Contact = () => {
                     name="email"
                     className="mt-1 block w-full px-4 py-3 border border-zinc-200 rounded-lg text-zinc-900 placeholder-zinc-400
                             focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent
-                            transition duration-150 ease-in-out"
+                            transition-all duration-200 ease-in-out transform hover:shadow-sm
+                            hover:border-zinc-300"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -86,7 +88,8 @@ const Contact = () => {
                     rows="5"
                     className="mt-1 block w-full px-4 py-3 border border-zinc-200 rounded-lg text-zinc-900 placeholder-zinc-400
                             focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:border-transparent
-                            transition duration-150 ease-in-out resize-none"
+                            transition-all duration-200 ease-in-out transform hover:shadow-sm
+                            hover:border-zinc-300 resize-none"
                     placeholder="How can we help you?"
                   ></textarea>
                 </div>
@@ -98,7 +101,8 @@ const Contact = () => {
                   className="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg
                           text-sm font-medium text-white bg-zinc-900 hover:bg-zinc-800
                           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500
-                          transition duration-150 ease-in-out transform hover:scale-[1.02]"
+                          transition-all duration-200 ease-in-out transform hover:scale-[1.02]
+                          hover:shadow-lg active:scale-[0.98]"
                 >
                   Send Message
                 </button>
