@@ -50,7 +50,6 @@ const Contact = () => {
                     placeholder="Your name"
                   />
                 </div>
-
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-zinc-700">
                     Email
