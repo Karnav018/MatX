@@ -42,7 +42,7 @@ const Navbar = () => {
               to="/visualizer"
               className="text-zinc-300 hover:text-white px-3 py-2 transition-colors duration-200"
             >
-              3D Visualizer
+              How it works
             </Link>
           </li>
           <li>

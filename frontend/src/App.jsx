@@ -1,10 +1,10 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import ARButton from './components/ARButton'
-import Home from './pages/Home'
-import Contact from './pages/Contact'
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import ARButton from "./components/ARButton";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Gallery from "./pages/Gallery";
 function App() {
   return (
     <Router>
@@ -15,14 +15,14 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/gallery" element={<Gallery />} />
             </Routes>
           </main>
           <ARButton />
         </div>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
-
+export default App;
