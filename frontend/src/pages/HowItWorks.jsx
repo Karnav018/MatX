@@ -1,32 +1,20 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useScrollContext } from '../components/ScrollContext';
 
 const HowItWorks = () => {
-  const location = useLocation();
-  
-  useEffect(() => {
-    // Scroll to the top when component mounts or location changes
-    window.scrollTo(0, 0);
-    
-    // Handle hash links for smooth scrolling
-    if (location.hash) {
-      const id = location.hash.substring(1);
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
+  // Get the locomotive scroll instance for potential custom effects
+  const { scroll: _scroll } = useScrollContext(); // Prefix with underscore to prevent unused var warning
   return (
-    <div className="min-h-[80vh] bg-matx-primary-900 py-12 md:py-16 overflow-x-hidden text-matx-text-primary">
+    <div className="min-h-[80vh] bg-matx-primary-900 py-12 md:py-16 overflow-x-hidden text-matx-text-primary" data-scroll-section>
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 md:mb-24 relative px-4">
-          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 h-1 bg-matx-accent-light opacity-30 rounded-full blur-sm"></div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight animate-fadeIn text-matx-text-primary">
+        <div className="text-center mb-16 md:mb-24 relative px-4" data-scroll data-scroll-speed="0.3">
+          <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 h-1 bg-matx-accent-light opacity-30 rounded-full blur-sm" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight text-matx-text-primary" data-scroll data-scroll-speed="0.2">
             How MatX Works
           </h1>
-          <p className="text-lg sm:text-xl text-matx-text-secondary max-w-3xl mx-auto animate-fadeIn delay-100">
+          <p className="text-lg sm:text-xl text-matx-text-secondary max-w-3xl mx-auto" data-scroll data-scroll-speed="0.4" data-scroll-delay="0.05">
             Transform your space with our professional AR tile visualization technology
           </p>
           
@@ -40,9 +28,9 @@ const HowItWorks = () => {
         </div>
         
         {/* Process Steps - Horizontal Timeline */}
-        <div className="relative mb-24 md:mb-32 px-2 sm:px-0">
+        <div className="relative mb-24 md:mb-32 px-2 sm:px-0" data-scroll data-scroll-speed="0.1">
           {/* Timeline line */}
-          <div className="hidden md:block absolute top-24 left-0 w-full h-1 bg-matx-border-light opacity-50"></div>
+          <div className="hidden md:block absolute top-24 left-0 w-full h-1 bg-matx-border-light opacity-50" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.3"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
             {/* Step 1 */}

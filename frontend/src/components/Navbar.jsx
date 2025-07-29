@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full bg-zinc-900 px-8 py-4 z-50 border-b border-zinc-800">
+    <nav className="fixed w-full bg-zinc-900 px-4 sm:px-6 lg:px-8 py-3 md:py-4 z-50 border-b border-zinc-800">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <img src={Logo} alt="AR Tiles Logo" className="h-10" />
@@ -112,12 +112,12 @@ const Navbar = () => {
       {/* Mobile menu overlay */}
       <div
         className={`
-          md:hidden fixed inset-y-0 right-0 w-72 bg-zinc-900 border-l border-zinc-800
+          md:hidden fixed inset-y-0 right-0 w-64 sm:w-72 bg-zinc-900 border-l border-zinc-800
           transform transition-all duration-300 ease-in-out
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        <ul className="flex flex-col items-start p-8 space-y-4">
+        <ul className="flex flex-col items-start p-6 sm:p-8 space-y-3 sm:space-y-4 pt-16">
           <li className="w-full">
             <Link
               to="/"

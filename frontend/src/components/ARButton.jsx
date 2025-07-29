@@ -15,7 +15,7 @@ const ARButton = () => {
           ? 'bg-zinc-800 scale-105' 
           : 'bg-zinc-900'
         } 
-        h-18 w-18 flex items-center justify-center
+        h-14 w-14 sm:h-16 sm:w-16 flex items-center justify-center
         text-zinc-300 hover:text-white border border-zinc-800 z-50
         hover:bg-zinc-800
         active:scale-95

@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useScrollContext } from '../components/ScrollContext';
 import tile1 from '../assets/Tiles/tile1.png';
 import tile2 from '../assets/Tiles/tile2.png';
 import tile3 from '../assets/Tiles/tile3.png';
@@ -24,6 +25,9 @@ import tile22 from '../assets/Tiles/tile22.jpg';
 import tile23 from '../assets/Tiles/tile23.jpg';
 
 const Gallery = () => {
+  // Get the locomotive scroll instance for potential custom effects
+  const { scroll: _scroll } = useScrollContext(); // Prefix with underscore to prevent unused var warning
+  
   const [currentPage, setCurrentPage] = useState(1);
   const [filterMaterial, setFilterMaterial] = useState('all');
   const [filterColor, setFilterColor] = useState('all');
@@ -378,13 +382,13 @@ const Gallery = () => {
   };
 
   return (
-    <div className="py-12 sm:py-16 px-3 sm:px-6 lg:px-8 overflow-hidden bg-gray-50 min-h-screen">
+    <div className="py-12 sm:py-16 px-3 sm:px-6 lg:px-8 overflow-hidden bg-gray-50 min-h-screen" data-scroll-section>
       {/* Gallery Header */}
-      <div className="mb-8">
+      <div className="mb-8" data-scroll data-scroll-speed="0.3">
         <div className="relative">
-          <div className="hidden md:block absolute right-0 top-0 w-32 h-32 bg-gray-100 rounded-full -z-10 opacity-50 animate-pulse"></div>
-          <p className="text-3xl md:text-4xl font-light text-gray-300 mb-1 md:mb-2">Tile</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Gallery</h1>
+          <div className="hidden md:block absolute right-0 top-0 w-32 h-32 bg-gray-100 rounded-full -z-10 opacity-50" data-scroll data-scroll-speed="0.7"></div>
+          <p className="text-3xl md:text-4xl font-light text-gray-300 mb-1 md:mb-2" data-scroll data-scroll-speed="0.2">Tile</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6" data-scroll data-scroll-speed="0.4">Gallery</h1>
         </div>
         <div className="max-w-4xl space-y-4">
           <p className="text-gray-600 text-sm md:text-base">
@@ -435,7 +439,7 @@ const Gallery = () => {
           </form>
           
           {/* Filter Dropdowns */}
-          <div className="flex flex-wrap gap-3 sm:gap-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4" data-scroll data-scroll-speed="0.5" data-scroll-delay="0.05">
             <div className="w-full sm:w-auto flex-1 md:flex-none">
               <label htmlFor="materialFilter" className="block text-xs sm:text-sm font-medium text-gray-700 mb-1">Material</label>
               <select 
@@ -538,7 +542,7 @@ const Gallery = () => {
       </div>
       
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 mb-12" data-scroll data-scroll-speed="0.2">
         {currentTiles.length > 0 ? (
           currentTiles.map((tile) => (
             <div 
