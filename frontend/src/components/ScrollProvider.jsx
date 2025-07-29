@@ -20,7 +20,7 @@ const ScrollProvider = ({ children }) => {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          lerp: 0.075, // Linear interpolation, lower=smoother
+          lerp: 0.1, // Linear interpolation, slightly increased for smoother scrolling without parallax
           smoothMobile: true,
           smartphone: {
             smooth: true,
@@ -31,7 +31,7 @@ const ScrollProvider = ({ children }) => {
             breakpoint: 1024,
           },
           reloadOnContextChange: true,
-          multiplier: 0.9, // Adjust scroll speed
+          multiplier: 1.0, // Standard scroll speed without parallax
           class: 'is-revealed'
         }}
         watch={[pathname]}
