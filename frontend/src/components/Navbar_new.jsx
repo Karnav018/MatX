@@ -126,7 +126,7 @@ const Navbar = () => {
                 </div>
                 <span className="hidden lg:block">{user?.firstName}</span>
                 <svg 
-                  className={`w-4 h-4 transition-transform duration-200 ${isUserMenuOpen ? 'rotate-180' : ''}`} 
+                  className={`w-4 h-4 transition-transform duration-200 ${isUserMenuOpen ? 'rotate-180' : ''}`}
                   fill="none" 
                   stroke="currentColor" 
                   viewBox="0 0 24 24"
@@ -243,8 +243,9 @@ const Navbar = () => {
       {/* Mobile menu overlay */}
       <div
         className={`
-          md:hidden fixed inset-y-0 right-0 w-64 sm:w-80 bg-zinc-900/95 backdrop-blur-md border-l border-zinc-800/70
-          transform transition-all duration-300 ease-in-out shadow-2xl
+          md:hidden fixed inset-y-0 right-0 w-64 sm:w-80 bg-gradient-to-b from-zinc-900/95 to-zinc-800/95 
+          backdrop-blur-md border-l border-zinc-700/50 shadow-2xl
+          transform transition-all duration-300 ease-in-out
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
@@ -260,91 +261,67 @@ const Navbar = () => {
         </button>
 
         {/* Logo in mobile menu */}
-        <div className="flex items-center space-x-3 px-6 py-6 border-b border-zinc-800/50">
+        <div className="flex items-center space-x-3 px-6 py-6 border-b border-zinc-700/50">
           <img src={Logo} alt="MatX Logo" className="h-8" />
           <span className="font-light tracking-wide text-xl bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
             MatX
           </span>
         </div>
-
+        
         <ul className="flex flex-col p-4 space-y-1">
           <li className="w-full">
             <Link
               to="/"
-              className={`block text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg transition-all duration-200 ${
-                location.pathname === '/' 
-                  ? 'bg-matx-accent/10 text-white border-l-4 border-matx-accent pl-3' 
-                  : 'hover:bg-zinc-800/50'
-              }`}
+              className="flex items-center text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200"
               onClick={toggleMenu}
             >
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-                Home
-              </div>
+              <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Home
             </Link>
           </li>
           <li className="w-full">
             <Link
               to="/how-it-works"
-              className={`block text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg transition-all duration-200 ${
-                location.pathname === '/how-it-works' 
-                  ? 'bg-matx-accent/10 text-white border-l-4 border-matx-accent pl-3' 
-                  : 'hover:bg-zinc-800/50'
-              }`}
+              className="flex items-center text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200"
               onClick={toggleMenu}
             >
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                How it works
-              </div>
+              <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              How it works
             </Link>
           </li>
           <li className="w-full">
             <Link
               to="/gallery"
-              className={`block text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg transition-all duration-200 ${
-                location.pathname === '/gallery' 
-                  ? 'bg-matx-accent/10 text-white border-l-4 border-matx-accent pl-3' 
-                  : 'hover:bg-zinc-800/50'
-              }`}
+              className="flex items-center text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200"
               onClick={toggleMenu}
             >
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                Gallery
-              </div>
+              <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Gallery
             </Link>
           </li>
           <li className="w-full">
             <Link
               to="/contact"
-              className={`block text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg transition-all duration-200 ${
-                location.pathname === '/contact' 
-                  ? 'bg-matx-accent/10 text-white border-l-4 border-matx-accent pl-3' 
-                  : 'hover:bg-zinc-800/50'
-              }`}
+              className="flex items-center text-zinc-300 hover:text-white text-base px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-200"
               onClick={toggleMenu}
             >
-              <div className="flex items-center">
-                <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Contact
-              </div>
+              <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Contact
             </Link>
           </li>
 
           {/* Mobile Auth Section */}
           {isAuthenticated ? (
-            <div className="mt-4 border-t border-zinc-800/70 pt-4">
-              <div className="flex items-center space-x-3 px-4 py-3 mb-2 bg-zinc-800/30 rounded-lg">
+            <div className="mt-4 border-t border-zinc-700/50 pt-4">
+              <div className="flex items-center space-x-3 px-4 py-3 mb-2 bg-zinc-800/30 rounded-lg mx-1">
                 <div className="w-10 h-10 bg-gradient-to-br from-matx-accent to-matx-accent-dark rounded-full flex items-center justify-center">
                   <span className="text-white font-medium text-sm">
                     {user?.firstName?.[0]}{user?.lastName?.[0]}
@@ -390,7 +367,7 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="mt-4 border-t border-zinc-800/70 pt-4 px-4 space-y-3">
+            <div className="mt-4 border-t border-zinc-700/50 pt-4 px-4 space-y-3">
               <Link
                 to="/login"
                 className="flex items-center justify-center w-full text-zinc-200 hover:text-white px-4 py-3 rounded-lg border border-zinc-700 hover:border-zinc-600 hover:bg-zinc-800/70 transition-all duration-200"
