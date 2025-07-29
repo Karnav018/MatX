@@ -8,7 +8,6 @@ const Parallax = ({
 }) => {
   return (
     <div 
-      data-scroll-section
       className={className}
       {...rest}
     >

@@ -1,45 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useScrollContext } from '../components/ScrollContext';
 
 const Home = () => {
-  // Get the locomotive scroll instance
-  const { scroll: _scroll } = useScrollContext(); // Prefix with underscore to prevent unused var warning
-  
-  // You can use the scroll instance for custom scrolling effects if needed
-  // For example:
-  // const handleSmoothScroll = (targetId) => {
-  //   if (_scroll) {
-  //     const target = document.getElementById(targetId);
-  //     if (target) _scroll.scrollTo(target);
-  //   }
-  // };
-
   return (
-    <div className="flex flex-col min-h-[80vh] bg-matx-primary-900 -mt-12 pb-8 sm:pb-12 md:pb-16 text-matx-text-primary" data-scroll-section>
-      {/* Hero Section */}
+    <div className="flex flex-col min-h-[80vh] bg-matx-primary-900 -mt-12 pb-8 sm:pb-12 md:pb-16 text-matx-text-primary">{/* Hero Section */}
       <section className="relative overflow-hidden">
         {/* Background decorative elements */}
         <div 
           className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(120,113,108,0.1),transparent_40%),radial-gradient(circle_at_70%_70%,rgba(168,162,158,0.1),transparent_40%)]"
-          data-scroll data-scroll-speed="-0.5"
+         
         ></div>
         
         {/* Hero Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-12 md:pt-32 md:pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1">
-              <div data-scroll data-scroll-speed="0.5" data-scroll-delay="0.1">
-                <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-matx-accent/20 mb-6" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">
+              <div>
+                <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-matx-accent/20 mb-6">
                   <span className="text-matx-accent-light text-xs sm:text-sm font-medium">Revolutionizing Tile Selection</span>
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-matx-text-primary" data-scroll data-scroll-speed="0.3">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-matx-text-primary">
                   Visualize Tiles <span className="text-matx-accent-light">in Your Space</span> Before You Buy
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-matx-text-secondary max-w-lg" data-scroll data-scroll-speed="0.5" data-scroll-delay="0.05">
+                <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-matx-text-secondary max-w-lg">
                   Experience the future of home renovation with our AR-powered tile visualization tool. See exactly how tiles will look in your space in real-time.
                 </p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4" data-scroll data-scroll-speed="0.7" data-scroll-delay="0.1">
+                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link to="/gallery" className="group w-full sm:w-auto">
                     <button className="w-full flex items-center justify-center space-x-2 px-6 py-3 bg-matx-accent hover:bg-matx-accent-dark rounded-md text-matx-text-primary font-medium shadow-lg transition duration-300 active:scale-95 touch-manipulation">
                       <span>Explore Tiles</span>
@@ -62,8 +48,8 @@ const Home = () => {
             
             {/* Hero Image/AR Demo Visualization */}
             <div className="order-1 md:order-2 flex justify-center md:justify-end">
-              <div className="relative" data-scroll data-scroll-speed="0.3">
-                <div className="relative rounded-lg overflow-hidden shadow-2xl border border-matx-border z-10" data-scroll data-scroll-speed="-0.2">
+              <div className="relative">
+                <div className="relative rounded-lg overflow-hidden shadow-2xl border border-matx-border z-10">
                   <div className="aspect-[4/3] w-full max-w-lg bg-matx-primary-800 flex items-center justify-center">
                     <div className="absolute inset-0 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-b from-matx-primary-800/40 to-matx-primary-900/90 z-10"></div>

@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import HowItWorks from "./pages/HowItWorks";
-import ScrollProvider from "./components/ScrollProvider";
 
 function AppContent() {
   return (
@@ -24,9 +23,7 @@ function AppContent() {
         </main>
         <ARButton />
       </div>
-      <div data-scroll-section>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
@@ -34,9 +31,7 @@ function AppContent() {
 function App() {
   return (
     <Router>
-      <ScrollProvider>
-        <AppContent />
-      </ScrollProvider>
+      <AppContent />
     </Router>
   );
 }

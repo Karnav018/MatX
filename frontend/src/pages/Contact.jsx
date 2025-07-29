@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import { useScrollContext } from '../components/ScrollContext';
 
 const Contact = () => {
-  // Get the locomotive scroll instance for potential custom effects
-  const { scroll: _scroll } = useScrollContext(); // Prefix with underscore to prevent unused var warning
-  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -74,15 +70,15 @@ const Contact = () => {
   };
   
   return (
-    <div className="min-h-[80vh] bg-matx-primary-900 py-12 md:py-16 px-4 sm:px-6 lg:px-8 text-matx-text-primary overflow-x-hidden" data-scroll-section>
+    <div className="min-h-[80vh] bg-matx-primary-900 py-12 md:py-16 px-4 sm:px-6 lg:px-8 text-matx-text-primary overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Page Title */}
-        <div className="text-center mb-12 md:mb-16 relative" data-scroll data-scroll-speed="0.3">
-          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 h-1 bg-matx-accent-light opacity-30 rounded-full blur-sm" data-scroll data-scroll-direction="horizontal" data-scroll-speed="1"></div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-tight text-matx-text-primary" data-scroll data-scroll-speed="0.2">
+        <div className="text-center mb-12 md:mb-16 relative">
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 h-1 bg-matx-accent-light opacity-30 rounded-full blur-sm"></div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-tight text-matx-text-primary">
             Get in Touch
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-matx-text-secondary max-w-3xl mx-auto" data-scroll data-scroll-speed="0.4" data-scroll-delay="0.05">
+          <p className="text-base sm:text-lg md:text-xl text-matx-text-secondary max-w-3xl mx-auto">
             Have questions about MatX? We're here to help you transform your space with our AR tile visualization technology.
           </p>
         </div>
@@ -90,11 +86,11 @@ const Contact = () => {
         {/* Main Content */}
         <div className="relative">
           {/* Background decoration */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(120,113,108,0.1),transparent_40%),radial-gradient(circle_at_70%_70%,rgba(168,162,158,0.1),transparent_40%)]" data-scroll data-scroll-speed="-0.3"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(120,113,108,0.1),transparent_40%),radial-gradient(circle_at_70%_70%,rgba(168,162,158,0.1),transparent_40%)]"></div>
           
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16" data-scroll data-scroll-speed="0.1">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             {/* Left Side - Contact Information */}
-            <div className="flex flex-col justify-center space-y-10" data-scroll data-scroll-speed="0.3" data-scroll-delay="0.1">
+            <div className="flex flex-col justify-center space-y-10">
               {/* Contact Methods */}
               <div className="space-y-6">
                 <div className="flex items-start space-x-6 group">

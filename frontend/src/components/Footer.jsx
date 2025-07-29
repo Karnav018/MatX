@@ -15,7 +15,7 @@ const Footer = () => {
           backgroundSize: '200px',
           transform: 'rotate(10deg) scale(1.2)',
           filter: 'grayscale(100%)'
-        }} data-scroll data-scroll-speed="-0.3"></div>
+        }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16 relative z-10">
