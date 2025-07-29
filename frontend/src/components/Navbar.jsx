@@ -39,7 +39,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/visualizer"
+              to="/how-it-works"
               className="text-zinc-300 hover:text-white px-3 py-2 transition-colors duration-200"
             >
               How it works
@@ -129,11 +129,11 @@ const Navbar = () => {
           </li>
           <li className="w-full">
             <Link
-              to="/visualizer"
+              to="/how-it-works"
               className="block text-zinc-300 hover:text-white text-lg px-4 py-3 hover:bg-zinc-800/50 transition-all duration-200"
               onClick={toggleMenu}
             >
-              3D Visualizer
+              How it works
             </Link>
           </li>
           <li className="w-full">

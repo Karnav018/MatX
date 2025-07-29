@@ -5,6 +5,7 @@ import ARButton from "./components/ARButton";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import HowItWorks from "./pages/HowItWorks";
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/how-it-works" element={<HowItWorks />} />
             </Routes>
           </main>
           <ARButton />
